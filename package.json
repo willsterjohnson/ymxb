@@ -1,10 +1,7 @@
 {
-	"name": "doc9-client",
+	"name": "lec",
 	"version": "0.0.1",
-	"repository": "https://github.com/Doc-9/doc9site/tree/client",
-	"license": "Closed Source",
 	"type": "module",
-	"description": "Client side for Doc-9",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -15,19 +12,15 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-node": "^1.0.0-next.35",
-		"@sveltejs/kit": "next",
-		"@types/mongoose": "^5.11.97",
+		"@sveltejs/adapter-vercel": "^1.0.0-next.27",
+		"@sveltejs/kit": "^1.0.0-next.141",
 		"prettier": "~2.3.2",
 		"prettier-plugin-svelte": "^2.2.0",
-		"sass": "^1.36.0",
-		"svelte": "^3.40.3",
-		"svelte-check": "^2.0.0",
+		"sass": "^1.37.5",
+		"svelte": "^3.41.0",
+		"svelte-check": "^2.2.4",
 		"svelte-preprocess": "^4.0.0",
 		"tslib": "^2.0.0",
 		"typescript": "^4.0.0"
-	},
-	"dependencies": {
-		"mongoose": "^5.13.3"
 	}
 }

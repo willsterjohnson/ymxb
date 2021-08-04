@@ -3,3 +3,4 @@
 /.svelte-kit/
 /package/
 .env
+.vercel_build_output
