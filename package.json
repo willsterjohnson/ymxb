@@ -1,0 +1,33 @@
+{
+	"name": "doc9-client",
+	"version": "0.0.1",
+	"repository": "https://github.com/Doc-9/doc9site/tree/client",
+	"license": "Closed Source",
+	"type": "module",
+	"description": "Client side for Doc-9",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check --plugin-search-dir=. .",
+		"format": "prettier --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-node": "^1.0.0-next.35",
+		"@sveltejs/kit": "next",
+		"@types/mongoose": "^5.11.97",
+		"prettier": "~2.3.2",
+		"prettier-plugin-svelte": "^2.2.0",
+		"sass": "^1.36.0",
+		"svelte": "^3.40.3",
+		"svelte-check": "^2.0.0",
+		"svelte-preprocess": "^4.0.0",
+		"tslib": "^2.0.0",
+		"typescript": "^4.0.0"
+	},
+	"dependencies": {
+		"mongoose": "^5.13.3"
+	}
+}
