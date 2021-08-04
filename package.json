@@ -15,7 +15,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-node": "^1.0.0-next.35",
+		"@sveltejs/adapter-node": "^1.0.0-next.36",
 		"@sveltejs/kit": "next",
 		"@types/mongoose": "^5.11.97",
 		"prettier": "~2.3.2",
