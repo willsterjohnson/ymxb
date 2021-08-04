@@ -20,7 +20,7 @@
 		"@types/mongoose": "^5.11.97",
 		"prettier": "~2.3.2",
 		"prettier-plugin-svelte": "^2.2.0",
-		"sass": "^1.36.0",
+		"sass": "^1.37.5",
 		"svelte": "^3.40.3",
 		"svelte-check": "^2.0.0",
 		"svelte-preprocess": "^4.0.0",
