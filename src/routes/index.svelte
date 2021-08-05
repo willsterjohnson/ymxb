@@ -54,13 +54,17 @@
 			out = `calc(${slope}${settings.mx} + ${coefficient1}${settings.b})`;
 		}
 
-		// if (setting.mult !== 1) {
-		// 	out = `calc(${out} * ${setting.mult})`;
-		// }
-
 		if (setting.func.includes("clamp( )")) {
 			out = `clamp(${coefficient1}${settings.b}, ${slope}${settings.mx} + ${coefficient1}${settings.b}, ${coefficient2}${settings.b})`;
 		}
+
+		if (setting.func.includes("max min")) {
+			out = `max(${coefficient1}${settings.b}, min(${slope}${settings.mx} + ${coefficient1}${settings.b}, ${coefficient2}${settings.b}))`;
+		}
+
+		// if (setting.mult !== 1) {
+		// 	out = `calc(${out} * ${setting.mult})`;
+		// }
 
 		return setting.isimportant ? `${out} !important;` : `${out};`;
 	};
@@ -89,9 +93,8 @@
 </script>
 
 <Header func={settings.func} />
-<!-- style="--fg: {th.fg}; --bg: {th.bg}; --fg-thin: {th.fgt}; --bg-thin:{th.bgt}" -->
+
 <div class="grid">
-	<!-- style="--fg: {th.fg}; --bg: {th.bg}; --fg-thin: {th.fgt}; --bg-thin:{th.bgt}" -->
 	<div class="control">
 		<h2>Points</h2>
 		<p>
@@ -149,6 +152,7 @@
 			<select id="format" bind:value={settings.func}>
 				<option value=" calc( )"> calc( )</option>
 				<option value="clamp( )">clamp( )</option>
+				<option value="max min">max min</option>
 			</select>
 		</p>
 	</div>
