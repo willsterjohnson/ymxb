@@ -58,12 +58,8 @@
 			out = `calc(${out} * ${setting.mult})`;
 		}
 
-		if (setting.func.includes("min( calc( ) )")) {
-			out = `min(${out}, ${coefficient2}${settings.b})`;
-		}
-
-		if (setting.func.includes("max( min( calc( ) ) )")) {
-			out = `max(${coefficient1}${settings.b}, ${out})`;
+		if (setting.func.includes("clamp( )")) {
+			out = `clamp(${coefficient1}${settings.b}, ${slope}${settings.mx} + ${coefficient1}${settings.b}, ${coefficient2}${settings.b},)`;
 		}
 
 		return setting.isimportant ? `${out} !important;` : `${out};`;
@@ -152,10 +148,7 @@
 			<span>Format</span>
 			<select id="format" bind:value={settings.func}>
 				<option value=" calc( )"> calc( )</option>
-				<option value="min( calc( ) )">min( calc( ) )</option>
-				<option value="max( min( calc( ) ) )"
-					>max( min( calc( ) ) )</option
-				>
+				<option value="clamp( )">clamp( )</option>
 			</select>
 		</p>
 	</div>
