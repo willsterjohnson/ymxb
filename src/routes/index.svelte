@@ -54,12 +54,12 @@
 			out = `calc(${slope}${settings.mx} + ${coefficient1}${settings.b})`;
 		}
 
-		if (setting.mult !== 1) {
-			out = `calc(${out} * ${setting.mult})`;
-		}
+		// if (setting.mult !== 1) {
+		// 	out = `calc(${out} * ${setting.mult})`;
+		// }
 
 		if (setting.func.includes("clamp( )")) {
-			out = `clamp(${coefficient1}${settings.b}, ${slope}${settings.mx} + ${coefficient1}${settings.b}, ${coefficient2}${settings.b},)`;
+			out = `clamp(${coefficient1}${settings.b}, ${slope}${settings.mx} + ${coefficient1}${settings.b}, ${coefficient2}${settings.b})`;
 		}
 
 		return setting.isimportant ? `${out} !important;` : `${out};`;
@@ -104,11 +104,11 @@
 			<input class="point-x2" type="number" bind:value={settings.x2} />
 			<input class="point-y2" type="number" bind:value={settings.y2} />
 		</p>
-		<h2>Result</h2>
+		<!-- <h2>Result</h2>
 		<p>
 			<span>Multiple by</span>
 			<input type="number" bind:value={settings.mult} />
-		</p>
+		</p> -->
 		<h2>Units</h2>
 		<p>
 			<span>mx</span>
