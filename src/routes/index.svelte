@@ -41,13 +41,6 @@
 	$: clamp = ymxb({ x: x1, y: y1 }, { x: x2, y: y2 });
 </script>
 
-<a
-	href={`https://ymxb.netlify.app/?x1=${x1}&y1=${y1}&x2=${x2}&y2=${y2}`}
-	class="btn"
->
-	We've moved to Netlify. Click here to be redirected with your settings
-	saved. (Shutting down this page on 1st November 2021)
-</a>
 <main
 	on:mouseleave={() => {
 		goto(`/?x1=${x1}&y1=${y1}&x2=${x2}&y2=${y2}`);
@@ -84,22 +77,22 @@
 		gap: 1rem;
 	}
 	h1,
-	.btn {
+	button {
 		width: 100%;
 		text-align: center;
 	}
 	span {
 		white-space: nowrap;
 	}
-	.btn {
+	button {
 		cursor: pointer;
 		transition: 300ms;
 	}
-	.btn:is(:hover, :focus-within) {
+	button:is(:hover, :focus-within) {
 		background: var(--black);
 		color: var(--white);
 	}
-	.btn,
+	button,
 	div {
 		background: var(--white);
 		border-radius: 0.5rem;
@@ -124,13 +117,5 @@
 	}
 	code {
 		font-size: 1.25rem;
-	}
-	a {
-		color: inherit;
-		margin-inline: auto;
-		padding: 0.5rem;
-		width: max-content;
-		display: block;
-		border-radius: 0 !important;
 	}
 </style>
