@@ -46,7 +46,7 @@
 	class="btn"
 >
 	We've moved to Netlify. Click here to be redirected with your settings
-	saved.
+	saved. (Shutting down this page on 1st November 2021)
 </a>
 <main
 	on:mouseleave={() => {
