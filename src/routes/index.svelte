@@ -13,15 +13,7 @@
 				$page.query.get("y2")
 			)
 		) {
-			try {
-				goto("/?x1=320&y1=14&x2=1280&y2=20");
-				console.log(
-					$page.query.get("x1"),
-					$page.query.get("y1"),
-					$page.query.get("x2"),
-					$page.query.get("y2"),
-				);
-			} catch {}
+			goto("/?x1=320&y1=14&x2=1280&y2=20");
 		}
 	});
 	let lastInput = 1;
@@ -49,6 +41,13 @@
 	$: clamp = ymxb({ x: x1, y: y1 }, { x: x2, y: y2 });
 </script>
 
+<a
+	href={`https://ymxb.netlify.app/?x1=${x1}&y1=${y1}&x2=${x2}&y2=${y2}`}
+	class="btn"
+>
+	We've moved to Netlify. Click here to be redirected with your settings
+	saved.
+</a>
 <main
 	on:mouseleave={() => {
 		goto(`/?x1=${x1}&y1=${y1}&x2=${x2}&y2=${y2}`);
@@ -58,7 +57,8 @@
 	}}
 >
 	<h1>Responsive CSS Values Using <span>y = mx + b</span></h1>
-	<button on:click={reset}>Reset</button>
+
+	<button class="btn" on:click={reset}>Reset</button>
 	<div>
 		<Input bind:x={x1} bind:y={y1} />
 		<Input bind:x={x2} bind:y={y2} />
@@ -84,22 +84,22 @@
 		gap: 1rem;
 	}
 	h1,
-	button {
+	.btn {
 		width: 100%;
 		text-align: center;
 	}
 	span {
 		white-space: nowrap;
 	}
-	button {
+	.btn {
 		cursor: pointer;
 		transition: 300ms;
 	}
-	button:is(:hover, :focus-within) {
+	.btn:is(:hover, :focus-within) {
 		background: var(--black);
 		color: var(--white);
 	}
-	button,
+	.btn,
 	div {
 		background: var(--white);
 		border-radius: 0.5rem;
@@ -124,5 +124,13 @@
 	}
 	code {
 		font-size: 1.25rem;
+	}
+	a {
+		color: inherit;
+		margin-inline: auto;
+		padding: 0.5rem;
+		width: max-content;
+		display: block;
+		border-radius: 0 !important;
 	}
 </style>
