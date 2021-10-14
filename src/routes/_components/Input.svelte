@@ -22,7 +22,11 @@
 		width: 13ch;
 	}
 	input {
+		-webkit-appearance: none;
+		border-radius: 0;
+		border: 1px solid #0004;
 		width: 8ch;
-		height: 1.25rem;
+		padding: 0 0 0 0;
+		height: 1.5rem;
 	}
 </style>
