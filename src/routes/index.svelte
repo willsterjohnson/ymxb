@@ -3,6 +3,7 @@
 	import { page } from "$app/stores";
 	import { onMount } from "svelte";
 	import Input from "./_components/Input.svelte";
+	import SEO from "./_components/SEO.svelte";
 
 	onMount(() => {
 		if (
@@ -16,11 +17,13 @@
 			goto("/?x1=320&y1=14&x2=1280&y2=20");
 		}
 	});
+
 	let lastInput = 1;
 	let x1 = +$page.query.get("x1") || 320;
 	let y1 = +$page.query.get("y1") || 14;
 	let x2 = +$page.query.get("x2") || 1280;
 	let y2 = +$page.query.get("y2") || 20;
+
 	const reset = () => {
 		goto("/?x1=320&y1=14&x2=1280&y2=20");
 		x1 = 320;
@@ -28,7 +31,9 @@
 		x2 = 1280;
 		y2 = 20;
 	};
+
 	const dec = (num: number) => Math.round(num * 1000) / 1000;
+
 	const ymxb = (
 		p1: { x: number; y: number },
 		p2: { x: number; y: number },
@@ -38,8 +43,16 @@
 			(p1.y - slope * p1.x) / 16,
 		)}rem, ${dec(p2.y / 16)}rem)`;
 	};
+
 	$: clamp = ymxb({ x: x1, y: y1 }, { x: x2, y: y2 });
 </script>
+
+<SEO
+	title="Responsive CSS | willsterjohnson.com"
+	url="https://ymxb.willsterjohnson.com"
+	image="/seo.png"
+	description="Responsive and accessible CSS values without the hassle."
+/>
 
 <main
 	on:mouseleave={() => {
@@ -59,8 +72,8 @@
 	<div>
 		<code>{@html clamp}</code>
 	</div>
-	<div>
-		<p><strong>font-size demo</strong></p>
+	<div class="demo">
+		<h2>font-size demo</h2>
 		<p style="font-size: {clamp}">
 			In another moment down went Alice after it, never once considering
 			how in the world she was to get out again.
@@ -108,14 +121,15 @@
 		align-items: flex-start;
 		flex-grow: 1;
 	}
-	div:last-child {
+	div.demo {
 		align-items: center;
+		width: 100%;
 		overflow: hidden;
 	}
-	div:last-child > :first-child {
+	div.demo > :first-child {
 		max-width: 20rem;
 	}
 	code {
-		font-size: 1.25rem;
+		background: #0001;
 	}
 </style>
