@@ -123,7 +123,8 @@
 	}
 	button,
 	div,
-	section {
+	section,
+	h1 {
 		background: var(--white);
 		border-radius: 0.5rem;
 		border: none;
