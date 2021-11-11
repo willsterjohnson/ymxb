@@ -1,53 +1,53 @@
-/* custom globals */
 :root {
 --white: #fff;
 --black: #000;
 }
 html {
-	/* 10 random position and color radial gradients */
-	background-color: #ccc;
+	background-color: #fff;
 	background-image:
-		radial-gradient(circle at 76% 41%, hsl(280, 75%, 55%) 0%, hsla(280, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 26% 82%, hsl(118, 75%, 55%) 0%, hsla(118, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 37% 95%, hsl(246, 75%, 55%) 0%, hsla(246, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 69% 89%, hsl(68, 75%, 55%) 0%, hsla(68, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 4% 9%, hsl(175, 75%, 55%) 0%, hsla(175, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 56% 54%, hsl(28, 75%, 55%) 0%, hsla(28, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 12% 67%, hsl(151, 75%, 55%) 0%, hsla(151, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 7% 46%,  hsl(37, 75%, 55%) 0%, hsla(37, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 51% 47%,  hsl(298, 75%, 55%) 0%, hsla(298, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 98% 7%,   hsl(200, 75%, 55%) 0%, hsla(200, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 52% 25%,  hsl(66, 75%, 55%) 0%, hsla(66, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 21% 92%,  hsl(167, 75%, 55%) 0%, hsla(167, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 45% 17%,  hsl(108, 75%, 55%) 0%, hsla(108, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 20% 100%, hsl(316, 75%, 55%) 0%, hsla(316, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 41% 76%, hsl(280, 75%, 55%) 0%, hsla(280, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 82% 26%, hsl(118, 75%, 55%) 0%, hsla(118, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 95% 37%, hsl(246, 75%, 55%) 0%, hsla(246, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 89% 69%, hsl(68, 75%, 55%) 0%, hsla(68, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 9% 4%, hsl(175, 75%, 55%) 0%, hsla(175, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 54% 56%, hsl(28, 75%, 55%) 0%, hsla(28, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 67% 12%, hsl(151, 75%, 55%) 0%, hsla(151, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 46% 7%,  hsl(37, 75%, 55%) 0%, hsla(37, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 47% 51%,  hsl(298, 75%, 55%) 0%, hsla(298, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 7% 98%,   hsl(200, 75%, 55%) 0%, hsla(200, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 25% 52%,  hsl(66, 75%, 55%) 0%, hsla(66, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 92% 21%,  hsl(167, 75%, 55%) 0%, hsla(167, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 17% 45%,  hsl(108, 75%, 55%) 0%, hsla(108, 75%, 55%, 0) 20%),
-		radial-gradient(circle at 100% 20%, hsl(316, 75%, 55%) 0%, hsla(316, 75%, 55%, 0) 20%);
+		radial-gradient(circle at 76% 41%, hsla(280, 75%, 55%, 1) 0%, hsla(280, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 26% 82%, hsla(118, 75%, 55%, 1) 0%, hsla(118, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 37% 95%, hsla(246, 75%, 55%, 1) 0%, hsla(246, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 69% 89%, hsla(68, 75%, 55%, 1) 0%, hsla(68, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 4% 9%, hsla(175, 75%, 55%, 1) 0%, hsla(175, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 56% 54%, hsla(28, 75%, 55%, 1) 0%, hsla(28, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 12% 67%, hsla(151, 75%, 55%, 1) 0%, hsla(151, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 7% 46%,  hsla(37, 75%, 55%, 1) 0%, hsla(37, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 51% 47%,  hsla(298, 75%, 55%, 1) 0%, hsla(298, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 98% 7%,   hsla(200, 75%, 55%, 1) 0%, hsla(200, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 52% 25%,  hsla(66, 75%, 55%, 1) 0%, hsla(66, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 21% 92%,  hsla(167, 75%, 55%, 1) 0%, hsla(167, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 45% 17%,  hsla(108, 75%, 55%, 1) 0%, hsla(108, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 20% 100%, hsla(316, 75%, 55%, 1) 0%, hsla(316, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 41% 76%, hsla(280, 75%, 55%, 1) 0%, hsla(280, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 82% 26%, hsla(118, 75%, 55%, 1) 0%, hsla(118, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 95% 37%, hsla(246, 75%, 55%, 1) 0%, hsla(246, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 89% 69%, hsla(68, 75%, 55%, 1) 0%, hsla(68, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 9% 4%, hsla(175, 75%, 55%, 1) 0%, hsla(175, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 54% 56%, hsla(28, 75%, 55%, 1) 0%, hsla(28, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 67% 12%, hsla(151, 75%, 55%, 1) 0%, hsla(151, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 46% 7%,  hsla(37, 75%, 55%, 1) 0%, hsla(37, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 47% 51%,  hsla(298, 75%, 55%, 1) 0%, hsla(298, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 7% 98%,   hsla(200, 75%, 55%, 1) 0%, hsla(200, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 25% 52%,  hsla(66, 75%, 55%, 1) 0%, hsla(66, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 92% 21%,  hsla(167, 75%, 55%, 1) 0%, hsla(167, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 17% 45%,  hsla(108, 75%, 55%, 1) 0%, hsla(108, 75%, 55%, 0) 40%),
+		radial-gradient(circle at 100% 20%, hsla(316, 75%, 55%, 1) 0%, hsla(316, 75%, 55%, 0) 40%);
 }
 body {
 	font-size: 1.25rem;
 	backdrop-filter: blur(50rem);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-/* Box sizing rules */
+h1,h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margin */
 body,
 h1,
 h2,
@@ -56,7 +56,6 @@ p {
 }
 
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -64,8 +63,10 @@ body {
 	padding: 0.1px;
 }
 
-
-/* Inherit fonts for inputs and buttons */
+::selection {
+  color: var(--white);
+  background: var(--black);
+}
 input,
 button,
 textarea,
@@ -73,7 +74,6 @@ select {
   font: inherit;
 }
 
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -83,4 +83,10 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+*, *:focus {
+  outline: none !important;
+}
+*:focus-visible {
+  outline: 1px hsl(180,70%,50%) solid !important;
 }

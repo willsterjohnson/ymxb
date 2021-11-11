@@ -80,13 +80,22 @@
 		<p>
 			Complete the sentences below with whatever values you want to use at
 			the given screen sizes (or pick your own screen size!) and copy the
-			resulting CSS into your project. For convenience, there's a demo for
-			both <code>font-size</code> and <code>border-width</code>.
+			resulting CSS into your project.
+		</p>
+		<p>
+			If you want to share the value you've made, just copy the URL! It
+			will update
+			<span
+				class="dotunder"
+				title="Okay, it's an event listener not magic."
+			>
+				automagically
+			</span> when you go to copy it.
 		</p>
 	</section>
 	<div>
-		<Input bind:x={x1} bind:y={y1} />
-		<Input bind:x={x2} bind:y={y2} />
+		<Input label="smallest point" bind:x={x1} bind:y={y1} />
+		<Input label="largest point" bind:x={x2} bind:y={y2} />
 	</div>
 	<div>
 		<code>{@html clamp}</code>
@@ -161,6 +170,9 @@
 	}
 	.demo p + p {
 		margin-top: 0.5rem;
+	}
+	.dotunder {
+		text-decoration: underline dotted currentColor;
 	}
 	code {
 		background: #0001;
