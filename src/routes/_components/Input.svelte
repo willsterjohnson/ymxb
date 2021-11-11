@@ -29,7 +29,7 @@
 		border: 2px solid #0002;
 		width: 8ch;
 		padding: 0 0 0 0;
-		height: 1.3rem;
+		height: 1.5rem;
 		transition: 300ms;
 		overflow: hidden;
 	}
