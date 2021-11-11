@@ -70,6 +70,20 @@
 	<h1>Responsive CSS Values Using <span>y = mx + b</span></h1>
 
 	<button class="btn" on:click={reset}>Reset</button>
+	<section class="demo">
+		<h2>How it works</h2>
+		<p>
+			Using a little bit of geometry and the wonderful CSS
+			<code>clamp()</code> function, we can quite quickly generate CSS values
+			that scale linearly across every possible screen size!
+		</p>
+		<p>
+			Complete the sentences below with whatever values you want to use at
+			the given screen sizes (or pick your own screen size!) and copy the
+			resulting CSS into your project. For convenience, there's a demo for
+			both <code>font-size</code> and <code>border-width</code>.
+		</p>
+	</section>
 	<div>
 		<Input bind:x={x1} bind:y={y1} />
 		<Input bind:x={x2} bind:y={y2} />
@@ -131,7 +145,7 @@
 	}
 	div,
 	section {
-		padding: 1rem;
+		padding: 0.5rem;
 		width: max(25rem, 45vmin);
 		margin: 0 auto;
 		display: flex;
@@ -140,10 +154,13 @@
 		align-items: flex-start;
 		flex-grow: 1;
 	}
-	section.demo {
+	.demo {
 		align-items: center;
 		width: 100%;
 		overflow: hidden;
+	}
+	.demo p + p {
+		margin-top: 0.5rem;
 	}
 	code {
 		background: #0001;
@@ -154,5 +171,8 @@
 	}
 	h2 code {
 		padding: 0.25rem 0.25rem 0;
+	}
+	p code {
+		padding: 0.1rem 0.1rem 0;
 	}
 </style>
