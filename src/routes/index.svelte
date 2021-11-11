@@ -39,12 +39,18 @@
 		p2: { x: number; y: number },
 	) => {
 		let slope = (p2.y - p1.y) / (p2.x - p1.x);
-		return `clamp(${dec(p1.y / 16)}rem, ${dec(slope * 100)}vmin + ${dec(
+		return `clamp(
+      <br />&nbsp;&nbsp;${dec(p1.y / 16)}rem,
+      <br />&nbsp;&nbsp;${dec(slope * 100)}vmin + ${dec(
 			(p1.y - slope * p1.x) / 16,
-		)}rem, ${dec(p2.y / 16)}rem)`;
+		)}rem,
+      <br />&nbsp;&nbsp;${dec(p2.y / 16)}rem
+      <br />)`;
 	};
 
 	$: clamp = ymxb({ x: x1, y: y1 }, { x: x2, y: y2 });
+
+	const pure = (c: string) => c.replace(/<br \/>|&nbsp;/g, "");
 </script>
 
 <SEO
@@ -53,7 +59,6 @@
 	image="/seo.png"
 	description="Responsive and accessible CSS values without the hassle."
 />
-
 <main
 	on:mouseleave={() => {
 		goto(`/?x1=${x1}&y1=${y1}&x2=${x2}&y2=${y2}`);
@@ -72,13 +77,24 @@
 	<div>
 		<code>{@html clamp}</code>
 	</div>
-	<div class="demo">
-		<h2>font-size demo</h2>
-		<p style="font-size: {clamp}">
+	<section class="demo">
+		<h2><code>font-size</code> demo</h2>
+		<p style="font-size: {pure(clamp)}">
 			In another moment down went Alice after it, never once considering
 			how in the world she was to get out again.
 		</p>
-	</div>
+	</section>
+	<section class="demo">
+		<h2><code>border-width</code> demo</h2>
+		<p
+			style="border: 1px solid var(--black); border-width: {pure(
+				clamp,
+			)}; "
+		>
+			In another moment down went Alice after it, never once considering
+			how in the world she was to get out again.
+		</p>
+	</section>
 </main>
 
 <style>
@@ -106,12 +122,14 @@
 		color: var(--white);
 	}
 	button,
-	div {
+	div,
+	section {
 		background: var(--white);
 		border-radius: 0.5rem;
 		border: none;
 	}
-	div {
+	div,
+	section {
 		padding: 1rem;
 		width: max(25rem, 45vmin);
 		margin: 0 auto;
@@ -121,15 +139,19 @@
 		align-items: flex-start;
 		flex-grow: 1;
 	}
-	div.demo {
+	section.demo {
 		align-items: center;
 		width: 100%;
 		overflow: hidden;
 	}
-	div.demo > :first-child {
-		max-width: 20rem;
-	}
 	code {
 		background: #0001;
+		padding: 0.5rem;
+		border-radius: 0.25rem;
+		width: 100%;
+		height: 100%;
+	}
+	h2 code {
+		padding: 0.25rem 0.25rem 0;
 	}
 </style>
